@@ -1,19 +1,6 @@
+// Contract definitions
 const contractAddress = '0x7aBA108BC28826f1Dd246646f60615b6934363F0';
-
-const provider = window.web3.currentProvider;
-const web3 = new Web3(provider);
-
-//Get user account
-var account;
-web3.eth.getAccounts(function(error, accounts){
-    account = accounts[0];
-    if(!account) {
-        console.log("No account found, Connect to Eth Wallet");
-    }
-});
-
-// Create contract instance
-const helloWorlABI = [
+const contractAbi = [
 	{
 		"constant": false,
 		"inputs": [
@@ -51,7 +38,21 @@ const helloWorlABI = [
 		"type": "function"
 	}
 ]
-let contract = new web3.eth.Contract(helloWorlABI, contractAddress);
+
+const provider = window.web3.currentProvider;
+const web3 = new Web3(provider);
+
+//Get user account
+var account;
+web3.eth.getAccounts(function(error, accounts){
+    account = accounts[0];
+    if(!account) {
+        console.log("No account found, Connect to Eth Wallet");
+    }
+});
+
+// Create contract instance
+let contract = new web3.eth.Contract(contractAbi, contractAddress);
 
 
 getMsg();
@@ -63,7 +64,6 @@ function sendMsg(){
     }).then(()=> {
         getMsg();
     });
-    //getMsg();
 }
 
 function getMsg() {
