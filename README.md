@@ -1,6 +1,6 @@
 # DemoDApp
 
-This is the demo for my Decentralised Web Apps talk, slides are available [here](phxtho.github.io/DAppsTalk)
+This is the demo for my Decentralised Web Apps talk, slides are available [here](https://phxtho.github.io/DAppsTalk)
 
 ## Instructions
 
