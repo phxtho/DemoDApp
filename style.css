@@ -1,0 +1,44 @@
+html{
+    height: 100%;
+    font-family: "Courier New", Courier, monospace;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: darkslategray;
+    color: white;
+}
+
+header {
+    width: 100%;
+    background-color: steelblue;
+}
+
+h1{
+    margin-top: 0;
+}
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 75%;
+
+}
+
+#msgDisplay{
+    margin: 50px;
+    font-size: 50px;
+}
+
+#sendBtn{
+    color: white;
+    background-color: steelblue;
+    width: 175px;
+    height: 30px;    
+}
